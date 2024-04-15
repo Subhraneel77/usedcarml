@@ -15,9 +15,9 @@ def predict_datapoint():
         return render_template("form.html")
     else: 
         data = CustomData(
-            manufacturer = float(request.form.get('manufacturer')),
-            model = float(request.form.get('model')),
-            category = float(request.form.get('category')), 
+            manufacturer = float(request.form.get("manufacturer")),
+            model = float(request.form.get("model")),
+            category = float(request.form.get("category")), 
             leatherinterior= float(request.form.get("leatherinterior")), 
             fueltype = float(request.form.get("fueltype")),
             enginevolume = float(request.form.get("enginevolume")), 
@@ -27,9 +27,9 @@ def predict_datapoint():
             doors = float(request.form.get("doors")),
             wheel = float(request.form.get("wheel")),
             color = float(request.form.get("color")),
-            productionyear = request.form.get("productionyear"), 
-            cylinders = request.form.get("cylinders"), 
-            airbags = request.form.get("airbags")
+            productionyear = request.form.get('productionyear'), 
+            cylinders = request.form.get('cylinders'), 
+            airbags = request.form.get('airbags')
         )
     new_data = data.get_data_as_dataframe()
     predict_pipeline = PredictPipeline()
@@ -40,6 +40,6 @@ def predict_datapoint():
     return render_template("results.html", final_result = results)
 
 if __name__ == "__main__": 
-    app.run(host = "0.0.0.0", debug= True)
+    app.run(port=8000, debug= True)
 
-#http://127.0.0.1:5000/ in browser
+#http://127.0.0.1:8000/ in browser
