@@ -1,0 +1,74 @@
+<html>
+
+<body>
+    <form action="{{url_for('predict_datapoint')}}" method="POST">
+        <div class="form-group">
+            <label for="productionyear">Productionyear:</label>
+            <input type="text" id="productionyear" name="productionyear" placeholder="Enter productionyear value (float)">
+        </div>
+
+        <div class="form-group">
+            <label for="cylinders">Cylinders:</label>
+            <input type="text" id="cylinders" name="cylinders" placeholder="Enter no. of cylinders (float)">
+        </div>
+
+        <div class="form-group">
+            <label for="airbags">Airbags:</label>
+            <input type="text" id="airbags" name="airbags" placeholder="Enter no. of airbags (float)">
+        </div>
+
+        <div class="form-group">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" placeholder="Enter Model (float)">
+        </div>
+
+        <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color" placeholder="Enter color (float)">
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" placeholder="Enter category (float)">
+        </div>
+        <div class="form-group">
+            <label for="mileage">Mileage:</label>
+            <input type="text" id="mileage" name="mileage" placeholder="Enter mileage (float)">
+        </div>
+
+        <div class="form-group">
+            <label for="drivewheels">Drivewheels:</label>
+            <select id="drivewheels" name="drivewheels">
+    <option value="4x4">4x4</option>
+    <option value="Front">Front</option>
+    <option value="Rear">Rear</option>
+  </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fueltype">Fueltype:</label>
+            <select id="fueltype" name="fueltype">
+    <option value="Hybrid">Hybrid</option>
+    <option value="Petrol">Petrol</option>
+    <option value="Diesel">Diesel</option>
+    <option value="CNG">CNG</option>
+    <option value="Plug-in Hybrid">Plug-in Hybrid</option>
+    <option value="LPG">LPG</option>
+    <option value="Hydrogen">Hydrogen</option>
+  </select>
+        </div>
+
+        <div class="form-group">
+            <label for="leatherinterior">Leatherinterior:</label>
+            <select id="leatherinterior" name="leatherinterior">
+    <option value="YES">YES</option>
+    <option value="NO">NO</option>
+  </select>
+        </div>
+
+        <div style="clear:both;"></div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
