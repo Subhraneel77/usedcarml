@@ -15,21 +15,21 @@ def predict_datapoint():
         return render_template("form.html")
     else: 
         data = CustomData(
-            manufacturer = float(request.form.get("manufacturer")),
-            model = float(request.form.get("model")),
-            category = float(request.form.get("category")), 
-            leatherinterior= float(request.form.get("leatherinterior")), 
-            fueltype = float(request.form.get("fueltype")),
-            enginevolume = float(request.form.get("enginevolume")), 
-            gearboxtype = float(request.form.get("gearboxtype")), 
-            mileage = float(request.form.get("mileage")), 
-            drivewheels = float(request.form.get("drivewheels")), 
-            doors = float(request.form.get("doors")),
-            wheel = float(request.form.get("wheel")),
-            color = float(request.form.get("color")),
-            productionyear = request.form.get('productionyear'), 
-            cylinders = request.form.get('cylinders'), 
-            airbags = request.form.get('airbags')
+            manufacturer = request.form.get("manufacturer"),
+            model = request.form.get("model"),
+            category = request.form.get("category"), 
+            leatherinterior= request.form.get("leatherinterior"), 
+            fueltype = request.form.get("fueltype"),
+            enginevolume = request.form.get("enginevolume"), 
+            gearboxtype = request.form.get("gearboxtype"), 
+            mileage = request.form.get("mileage"), 
+            drivewheels = request.form.get("drivewheels"), 
+            doors = request.form.get("doors"),
+            wheel = request.form.get("wheel"),
+            color = request.form.get("color"),
+            productionyear = float(request.form.get('productionyear')), 
+            cylinders = float(request.form.get('cylinders')), 
+            airbags = float(request.form.get('airbags'))
         )
     new_data = data.get_data_as_dataframe()
     predict_pipeline = PredictPipeline()
